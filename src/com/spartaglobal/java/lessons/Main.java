@@ -37,5 +37,7 @@ public class Main {
         System.out.println(Ranges.sumRange(0, 0)); // 0
         System.out.println(Ranges.sumRange(20, 24)); // 110
         System.out.println(Ranges.sumRange(-2, 3)); // 3
+        System.out.println(Ranges.sumRange(6, 6)); // 6
+        System.out.println(Ranges.sumRange(8, 6)); // 6
     }
 }
