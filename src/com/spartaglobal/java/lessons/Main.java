@@ -39,5 +39,6 @@ public class Main {
         System.out.println(Ranges.sumRange(-2, 3)); // 3
         System.out.println(Ranges.sumRange(6, 6)); // 6
         System.out.println(Ranges.sumRange(8, 6)); // 6
+        Ranges.swapIntsWhenInWrongOrder(10, 5);
     }
 }
