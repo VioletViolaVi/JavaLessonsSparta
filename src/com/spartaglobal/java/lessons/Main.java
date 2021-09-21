@@ -5,7 +5,9 @@ public class Main {
         // palindrome (spelt same either way round)
         Palindrome.palindromeSentence("hello");
         Palindrome.palindromeSentence("madam");
-        // substring practice
-        Substrings.substringMethod("pizza", 0, 3); // cuts 'pizza' string in part
+
+        // my java methods
+        JavaMethods.substringMethod("pizza", 0, 3); // cuts 'pizza' string in part
+        JavaMethods.splitMethod("Ha,ppy,Birth,day", ", ");
     }
 }
