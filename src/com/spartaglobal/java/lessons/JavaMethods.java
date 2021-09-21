@@ -30,5 +30,4 @@ public class JavaMethods {
     public static void indexOfMethod(String str, char letter) {
         System.out.println(str.indexOf(letter));
     }
-
 }

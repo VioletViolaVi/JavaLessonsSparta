@@ -17,6 +17,7 @@ public class Main {
         JavaMethods.containsMethod("Waterfall", "Water");
         JavaMethods.indexOfMethod("Noodles", 'q');
 
-
+        // my enums
+        Enums.enumContinentsInfo();
     }
 }
