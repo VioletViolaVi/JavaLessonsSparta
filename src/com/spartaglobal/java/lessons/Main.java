@@ -19,5 +19,9 @@ public class Main {
 
         // my enums
         Enums.enumContinentsInfo();
+
+        // auto boxing & auto unboxing
+        Boxing.autoBoxing();
+        Boxing.autoUnBoxing();
     }
 }
