@@ -9,5 +9,7 @@ public class Main {
         // my java methods
         JavaMethods.substringMethod("pizza", 0, 3); // cuts 'pizza' string in part
         JavaMethods.splitMethod("Ha,ppy,Birth,day", ", ");
+        JavaMethods.matchMethod("SE15 2PH", "[A-Z]{2}[0-9]{2}\\s+[0-9][A-Z]{2}");
+
     }
 }

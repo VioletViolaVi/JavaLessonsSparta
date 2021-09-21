@@ -10,4 +10,12 @@ public class JavaMethods {
     public static void splitMethod(String str, String wayOfSplit) {
         System.out.println(str.split(wayOfSplit));
     }
+
+    // matches method
+    public static void matchMethod(String str, String regexStr) {
+        System.out.println(str.matches(regexStr));
+    }
+
+
+
 }
