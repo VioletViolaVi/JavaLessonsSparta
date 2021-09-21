@@ -14,6 +14,7 @@ public class Main {
         JavaMethods.compareMethod("Raven", "Baxter"); // +ve value indicates that Baxter is longer than Raven
         JavaMethods.compareMethod("Baxter", "Cory"); // -ve value indicates that Cory is shorter than Baxter
         JavaMethods.compareMethod("Cory", "Cory"); // zero value indicates that Cory is the same length as Cory
+        JavaMethods.containsMethod("Waterfall", "Water");
 
 
     }

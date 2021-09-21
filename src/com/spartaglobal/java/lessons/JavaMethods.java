@@ -26,4 +26,9 @@ public class JavaMethods {
         System.out.println(str1.contains(str2));
     }
 
+    // indexOf method
+    public static void indexOfMethod(String str, char letter) {
+        System.out.println(str.indexOf(letter));
+    }
+
 }
