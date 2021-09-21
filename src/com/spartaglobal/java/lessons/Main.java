@@ -27,5 +27,9 @@ public class Main {
         // factorials
         System.out.println(Factorials.factorial(5));
         System.out.println(Factorials.factorialUsingLoops(4));
+
+        // fibonaccis
+        System.out.println(Fibonacci.fibonacci(8));
+        System.out.println(Fibonacci.fibonacciLoops(8));
     }
 }
