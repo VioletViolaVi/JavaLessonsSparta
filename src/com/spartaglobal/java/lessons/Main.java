@@ -5,5 +5,7 @@ public class Main {
         // palindrome (spelt same either way round)
         Palindrome.palindromeSentence("hello");
         Palindrome.palindromeSentence("madam");
+        // substring practice
+        Substrings.substringMethod("pizza", 0, 3); // cuts 'pizza' string in part
     }
 }
