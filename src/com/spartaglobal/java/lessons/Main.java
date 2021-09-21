@@ -23,5 +23,8 @@ public class Main {
         // auto boxing & auto unboxing
         Boxing.autoBoxing();
         Boxing.autoUnBoxing();
+
+        // factorials
+        System.out.println(Factorials.factorial(5));
     }
 }
