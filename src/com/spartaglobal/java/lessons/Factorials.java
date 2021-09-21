@@ -2,6 +2,7 @@ package com.spartaglobal.java.lessons;
 
 public class Factorials {
     /*
+        Example: 5! ->
         5! = 5 * 4 * 3 * 2 * 1
         5! == 5 * 4!
         5! == 5 * 4 * 3!
@@ -15,5 +16,16 @@ public class Factorials {
             System.out.println("factorial(" + num + ") returns: " + num + " * factorial(" + (num - 1) + ")"); // to help see what's happening
             return num * factorial(num - 1);
         }
+    }
+
+    // same as above but using a for loop
+    public static int factorialUsingLoops(int paramNum){
+        int factorialNum = 1;
+        if (paramNum != 1) {
+            for (int i = paramNum; i > 1; i--) {
+                factorialNum *= i;
+            }
+        }
+        return factorialNum;
     }
 }

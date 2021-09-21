@@ -26,5 +26,6 @@ public class Main {
 
         // factorials
         System.out.println(Factorials.factorial(5));
+        System.out.println(Factorials.factorialUsingLoops(4));
     }
 }
