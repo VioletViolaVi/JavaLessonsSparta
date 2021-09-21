@@ -1,6 +1,27 @@
 package com.spartaglobal.java.lessons;
 
 public class Ranges {
+/*
+
+    // private instant fields
+    private static int first;
+    private static int second;
+
+    // constructor
+    public Ranges(int first, int second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    // getters
+    public static int getFirst() {
+        return first;
+    }
+    public static int getSecond() {
+        return second;
+    }
+
+*/
 
     public static int sumRange(int startInt, int endInt) {
         // calculating sum of all ints from startInt to endInt
