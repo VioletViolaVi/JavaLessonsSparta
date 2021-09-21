@@ -16,6 +16,14 @@ public class JavaMethods {
         System.out.println(str.matches(regexStr));
     }
 
+    // compares method
+    public static void compareMethod(String str1, String str2) {
+        System.out.println(str1.compareTo(str2));
+    }
 
+    // contains method
+    public static void containsMethod(String str1, String str2) {
+        System.out.println(str1.contains(str2));
+    }
 
 }
