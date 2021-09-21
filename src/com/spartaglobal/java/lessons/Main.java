@@ -31,5 +31,11 @@ public class Main {
         // fibonaccis
         System.out.println(Fibonacci.fibonacci(8));
         System.out.println(Fibonacci.fibonacciLoops(8));
+
+        // ranges
+        System.out.println(Ranges.sumRange(1, 4)); // 10
+        System.out.println(Ranges.sumRange(0, 0)); // 0
+        System.out.println(Ranges.sumRange(20, 24)); // 110
+        System.out.println(Ranges.sumRange(-2, 3)); // 3
     }
 }
