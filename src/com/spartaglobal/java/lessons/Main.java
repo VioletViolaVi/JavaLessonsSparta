@@ -2,7 +2,19 @@ package com.spartaglobal.java.lessons;
 
 public class Main {
     public static void main(String[] args) {
-        Policy policy = new Policy();
+        // an object is an instance of a class
+        // below is creating a policy variable and initialising it with a Policy object
+        Policy policyOne = new Policy();
+
+        policyOne.type = "Home";
+        policyOne.maxCover = 1500.0;
+        policyOne.policyHolder = "Denies Neagu";
+
+        if (policyOne.processClaim(1300.0, "Set fire to sofa")) {
+            System.out.println("Claim accepted");
+        } else {
+            System.out.println("Claim rejected");
+        }
 
 
 /*

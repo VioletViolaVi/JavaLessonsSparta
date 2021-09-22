@@ -1,6 +1,7 @@
 package com.spartaglobal.java.lessons;
 import java.util.Date;
 
+// class is a type of object
 public class Policy {
     // represents state information aka properties: the data elements of the class
     String type;
@@ -10,9 +11,9 @@ public class Policy {
     Date renewalDate;
 
     // methods (functions inside a class)
-    boolean processClaim(double claimAmount, String claimReason){
+    public boolean processClaim(double claimAmount, String claimReason){
         System.out.println("Processing claim for: " + claimReason);
-        // the below will return a boolean value:
+        // the below WILL return a boolean value:
         return claimAmount < maxCover;
     }
 
