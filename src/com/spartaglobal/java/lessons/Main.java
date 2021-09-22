@@ -110,39 +110,25 @@ public class Main {
 
         // Bubble sorting solution::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-        // array of ints
+        // array of ints for the argument value
         int intArray[] ={89, 7, 56, 2314, 78, 0, 145824, 4};
-
-        // prints ints before sorting
-        System.out.println("Before bubbleSort: ");
-        for(int i = 0; i < intArray.length; i++){
-            System.out.print(intArray[i] + ", ");
-        }
-        System.out.println();
 
         // calls bubbleSort method to rearrange ints
         BubbleSort.bubbleSort(intArray);
 
-        // prints ints after sorting
-        System.out.println("After bubbleSort: ");
-        for(int i = 0; i < intArray.length; i++){
-            System.out.print(intArray[i] + ", ");
-        }
-        System.out.println();
-
         // Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         System.out.println("\n");
 
-        // *instances of rectangles made*
+        // instances of rectangles classes made*
         Rectangle rectOne = new Rectangle(6,2);
         Rectangle rectTwo = new Rectangle(5,2);
         Rectangle rectThree = new Rectangle(2,2);
         Rectangle rectFour= new Rectangle(1,2);
 
-        // new instance of an ArrayList off the Rectangle class
+        // empty arraylist of DOUBLES made - these are DOUBLES!!!
         ArrayList<Double> allRectangles = new ArrayList<>();
 
-        // *adding on instances made from above*
+        // adding on instances made from earlier into the arraylist*
         allRectangles.add(rectOne.areaOfRectangle());
         allRectangles.add(rectTwo.areaOfRectangle());
         allRectangles.add(rectThree.areaOfRectangle());

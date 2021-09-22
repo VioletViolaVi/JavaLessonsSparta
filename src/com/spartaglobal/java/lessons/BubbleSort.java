@@ -2,18 +2,34 @@ package com.spartaglobal.java.lessons;
 
 public class BubbleSort {
     public static void bubbleSort(int[] intArray) {
-        // sorts function solution
-        int arrayLength = intArray.length;
-        int tempHolder = 0;
-        for (int i = 0; i < arrayLength; i++) {
-            for (int j = 1; j < (arrayLength - i); j++) {
-                if (intArray[j - 1] > intArray[j]) {
-                    //swapping elements
-                    tempHolder = intArray[j - 1];
-                    intArray[j - 1] = intArray[j];
+        // length of array
+        int intArrayLength = intArray.length;
+        // currently, empty int variable
+        int tempHolder;
+
+        // prints ints before sorting
+        System.out.println("Before bubbleSort: ");
+        for(int i = 0; i < intArray.length; i++){
+            System.out.print(intArray[i] + ", ");
+        }
+        System.out.println();
+
+        // checking 2 ints at a time to put in ascending order
+        for (int i = 0; i < intArrayLength; i++) {
+            for (int j = 0; j < intArrayLength; j++) {
+                if (intArray[i] < intArray[j]) {
+                    tempHolder = intArray[i];
+                    intArray[i] = intArray[j];
                     intArray[j] = tempHolder;
                 }
             }
         }
+
+        // prints ints after sorting
+        System.out.println("After bubbleSort: ");
+        for(int i = 0; i < intArray.length; i++){
+            System.out.print(intArray[i] + ", ");
+        }
+        System.out.println();
     }
 }
