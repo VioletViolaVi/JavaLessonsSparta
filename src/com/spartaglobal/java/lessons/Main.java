@@ -2,7 +2,8 @@ package com.spartaglobal.java.lessons;
 
 public class Main {
     public static void main(String[] args) {
-
+/*
+        // 21st September 2021:
         // palindrome (spelt same either way round)
         Palindrome.palindromeSentence("hello");
         Palindrome.palindromeSentence("madam");
@@ -42,5 +43,12 @@ public class Main {
         System.out.println("HERE: " + Ranges.sumRange(3, 1)); // 0
         Ranges.swapIntsWhenInWrongOrder(10, 5);
         Ranges.swapIntsWhenInWrongOrder(3, 1);
+
+        // 22nd September 2021:
+ */
+
+
+
+
     }
 }
