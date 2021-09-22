@@ -49,7 +49,33 @@ public class Main {
                 null); // 3rd new object made
         System.out.println(policyThree);
 
+        // instance of the subclass CarPolicy
+        CarPolicy tanyasPolicy = new CarPolicy(
+                "Car",
+                "Tanya",
+                123.0,
+                234000.0,
+                null,
+                new Vehicle());
+        tanyasPolicy.setMaxCover(45000.0);
+        tanyasPolicy.setTheCar(new Vehicle());
+        System.out.println(tanyasPolicy);
+        // policyTwo.setTheCar(new Vehicle) // would not work on Policy objects, only on CarPolicy objects
 
+        // declaring Policy class type whilst making an instance using the CarPolicy class
+        // inheritance describes an 'is a' relationship e.g.: a sports car 'is a' vehicle, an ArrayList 'is a' List etc.
+        // if you can read out loud the 'is a' relationship AND it makes sense, then it's correct to use it as an inheritance relationship in Java
+        // aka below: a CarPolicy 'is a' Policy, from the right-hand side to the left (read it that way :))
+        Policy staceyPolicy = new CarPolicy(
+                "Car",
+                "Stacey",
+                12.0,
+                123.0,
+                null,
+                new Vehicle());
+        System.out.println(staceyPolicy.getPolicyHolder());
+        // staceyPolicy.setTheCar(new Vehicle()); // can't access the CarPolicy class
+        // ((CarPolicy)staceyPolicy).setTheCar(new Vehicle()); // way to get around the error (this is called casting) from above HOWEVER it does come with errors/issues so... don't bother :D
 
 
 /*

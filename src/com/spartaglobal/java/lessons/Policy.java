@@ -3,7 +3,17 @@ import java.util.Date;
 import java.util.Objects;
 
 // classes are a type of object
+// adding the keyword 'final' (i.e.: public final class Policy) prevents you from creating subclasses i.e. nothing else can inherit from it
 public class Policy {
+    // instance variables should normally be private because they represent a state of a class, and we want them to be hidden. It is needed in this class, but it is not needed in the main method where they are 'called'. So avoid making these public (public is not fine so avoid as much as possible)
+    // private: can only be used in this class
+    // represents state information aka properties: the data elements of the class
+    private String type;
+    private String policyHolder;
+    private double premium;
+    private double maxCover;
+    private Date renewalDate;
+
     // name of constructor is ALWAYS the same as the name of the class otherwise it's not a constructor
     // no RETURN values, e.g. boolean, String, int, etc. are defined in the signature of the constructors
     // generated using generate feature in intellij:
@@ -18,15 +28,6 @@ public class Policy {
     // constructor with zero arguments
     public Policy() {
     }
-
-    // instance variables should normally be private because they represent a state of a class, and we want them to be hidden. It is needed in this class, but it is not needed in the main method where they are 'called'. So avoid making these public (public is not fine so avoid as much as possible)
-    // private: can only be used in this class
-    // represents state information aka properties: the data elements of the class
-    private String type;
-    private String policyHolder;
-    private double premium;
-    private double maxCover;
-    private Date renewalDate;
 
     // methods (functions inside a class) should normally be public, but it's not crucial
     public boolean processClaim(double claimAmount, String claimReason){
@@ -120,7 +121,4 @@ public class Policy {
     public int hashCode() {
         return Objects.hash(type, policyHolder, premium, maxCover, renewalDate);
     }
-
-
-
 }
