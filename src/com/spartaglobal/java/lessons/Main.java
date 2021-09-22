@@ -2,6 +2,9 @@ package com.spartaglobal.java.lessons;
 
 public class Main {
     public static void main(String[] args) {
+        Policy policy = new Policy();
+
+
 /*
         // 21st September 2021:
         // palindrome (spelt same either way round)
@@ -46,9 +49,5 @@ public class Main {
 
         // 22nd September 2021:
  */
-
-
-
-
     }
 }
