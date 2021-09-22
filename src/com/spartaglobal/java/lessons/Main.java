@@ -2,43 +2,35 @@ package com.spartaglobal.java.lessons;
 
 public class Main {
     public static void main(String[] args) {
-        // when making instances of constructors intellij, or any other editor, will identify which constructor you mean to use by matching the constructors parameters to the arguments passed in the instances of the said constructors. The constructors also have to be different regarding the number of arguments and their types.
-
+        // when making instances of constructors intellij, or any other editor, will identify which constructor you mean to use by matching the constructors parameters to the arguments passed in the instances of the said constructors. The constructors' parameters also have to be different regarding the number of arguments and their types.
         // an object is an instance of a class
-        // below is creating a policy variable and initialising it with a Policy object
-        Policy policyOne = new Policy(); // new object 1
 
+        // below creates a policy variable and initialising it with a Policy object
+        Policy policyOne = new Policy(); // 1st new object made
+        System.out.println(policyOne);
+
+        // setting values of the instance fields using the setters of the class
         policyOne.setType("Home");
         policyOne.setMaxCover(1500.0);
-        policyOne.setPolicyHolder("Denies Neagu");
+//        policyOne.setPolicyHolder("Denies Neagu"); // delete if not needed during class as I have rewritten this better down below :)
+        policyOne.setPremium(30.0);
+
+        // uses boolean method in Policy class to answer this if/else condition
         if (policyOne.processClaim(1300.0, "Set fire to sofa")) {
             System.out.println("Claim accepted");
         } else {
             System.out.println("Claim rejected");
         }
 
-        // my question response...
-        Policy policyTwo = new Policy(); // new object 2 is using the 'zero-argument' or 'default constructor' as there are no arguments passed though the constructor. You get this for free if none of your own constructers have been made
-        // null is printed as nothing has been assigned to THIS policyHolder
-        System.out.println(policyTwo.getPolicyHolder());
-        // 0.0 default as no value is in the below:
-        System.out.println(policyTwo.getPremium());
+        // (my question response...:)...)
+        // 2nd new object made
+        Policy policyTwo = new Policy(); // this object is using a 'zero-argument' or 'default' constructor as there are no arguments passed though the constructor. You get this for free from Java if none of your own constructors have been made
+        System.out.println(policyTwo.getPolicyHolder());// null is printed as nothing has been assigned to THIS policyHolder called on the 2nd new object
+        System.out.println(policyTwo.getPremium()); // 0.0 is the default value as there isn't a value present
 
+        // shows example of how the strings are set the same on different 'instances of the class' i.e. policyOne & policyTwo
+        policyOne.setPolicyHolder("Denies Neagu");
         policyTwo.setPolicyHolder("Denies Neagu");
-
-        policyOne.setPremium(30.0);
-        System.out.println(policyOne);
-
-        // creating an constructor looses any free contrcutors form intlelji
-        // the order of the values for the parameters will be defined by the order the parameters are present in the contsturotr
-        Policy policyThree = new Policy(
-                "Car",
-                "Vivian Chinweze",
-                12.0,
-                1200.0,
-                null); // object 3
-        System.out.println(policyThree);
-
         // '==' asks are they the same object
         // .equals calls the .equals() method which returns a boolean
         if (policyOne.equals(policyTwo)) {
@@ -46,6 +38,17 @@ public class Main {
         } else {
 
         }
+
+        // creating a constructor looses any free constructors form intellij
+        // the order of the arguments written in this 'instance of the constructor' is determined by the order the parameters in the constructor within the Policy class
+        Policy policyThree = new Policy(
+                "Car",
+                "Monica Taylor",
+                12.0,
+                1200.0,
+                null); // 3rd new object made
+        System.out.println(policyThree);
+
 
 
 
