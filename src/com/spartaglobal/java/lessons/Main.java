@@ -109,24 +109,31 @@ public class Main {
 
 
         // Bubble sorting solution::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        int arr[] ={3,60,35,2,45,320,5};
 
-        System.out.println("Array Before Bubble Sort");
-        for(int i=0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
+        // array of ints
+        int intArray[] ={89, 7, 56, 2314, 78, 0, 145824, 4};
+
+        // prints ints before sorting
+        System.out.println("Before bubbleSort: ");
+        for(int i = 0; i < intArray.length; i++){
+            System.out.print(intArray[i] + ", ");
         }
-
         System.out.println();
 
-        BubbleSort.bubbleSort(arr);//sorting array elements using bubble sort
-        System.out.println("Array After Bubble Sort");
-        for(int i=0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
+        // calls bubbleSort method to rearrange ints
+        BubbleSort.bubbleSort(intArray);
+
+        // prints ints after sorting
+        System.out.println("After bubbleSort: ");
+        for(int i = 0; i < intArray.length; i++){
+            System.out.print(intArray[i] + ", ");
         }
+        System.out.println();
 
         // Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        System.out.println("\n");
 
-        // instances of rectangles made*
+        // *instances of rectangles made*
         Rectangle rectOne = new Rectangle(6,2);
         Rectangle rectTwo = new Rectangle(5,2);
         Rectangle rectThree = new Rectangle(2,2);
@@ -134,12 +141,12 @@ public class Main {
 
         // new instance of an ArrayList off the Rectangle class
         ArrayList<Double> allRectangles = new ArrayList<>();
-        // adding on instances made from above*
+
+        // *adding on instances made from above*
         allRectangles.add(rectOne.areaOfRectangle());
         allRectangles.add(rectTwo.areaOfRectangle());
         allRectangles.add(rectThree.areaOfRectangle());
         allRectangles.add(rectFour.areaOfRectangle());
-        System.out.println("rectangle ArrayList: " + allRectangles);
 
         // calls the sorting method made to show the final (sorted) answer
         Rectangle.rectangleAngleSorter(allRectangles);

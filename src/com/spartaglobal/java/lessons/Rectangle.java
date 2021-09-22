@@ -38,10 +38,11 @@ public class Rectangle {
         ArrayList<Double> allRectanglesAngles = arrayListOfDoubles;
 
         // prints out all angles 1 by 1 b4 sorting
-        System.out.println("Before sorting: ");
+        System.out.println("Before sorting rectangle angles: ");
         for (double singleAngle : allRectanglesAngles) {
-            System.out.println(singleAngle);
+            System.out.print(singleAngle + ", ");
         }
+        System.out.println();
 
         // actual sorting process
         for (int i = 0; i < arrayListOfDoubles.size(); i++) {
@@ -55,63 +56,10 @@ public class Rectangle {
         }
 
         // After sorting printed:
-        System.out.println("After sorting: ");
+        System.out.println("After sorting rectangle angles: ");
         for (double singleAngle: allRectanglesAngles) {
-            System.out.println(singleAngle);
+            System.out.print(singleAngle + ", ");
         }
+        System.out.println();
     }
-
-
-
-
-
-
-
-//        public static void rectangleAngleSort(ArrayList<Rectangle> rectangleArray) {
-//            // create another version to an array of rectangles
-//
-//            //temporary holder; currently empty
-//            Rectangle tempHolder;
-//            // holds Rectangle arrayList inside
-//            ArrayList<Rectangle> allRectangles = rectangleArray;
-//
-//            // prints out all Rectangle classes one by one
-//            System.out.println("Before sorting: ");
-//            for (Rectangle singleRectangle : allRectangles) {
-//                System.out.println(singleRectangle);
-//            }
-//
-//            // sorting process
-//            for (int i = 0; i < allRectangles.size(); i++) {
-//                for (int j = 1; j < allRectangles.size(); j++) {
-//                    if (allRectangles.get(i) > allRectangles.get(j)) {
-//                        tempHolder = allRectangles.get(i);
-//                        allRectangles.get(i) = allRectangles.get(j);
-//                        allRectangles.get(j) = tempHolder;
-//                    }
-//                }
-//            }
-//        }
-
-
-
-//        public static void rectangleAngleSort(ArrayList<Rectangle> rectangleArray) {
-//        // create another version to an array of rectangles
-//        // sorts function solution
-//        int arrayLength = rectangleArray.size();
-//        int tempHolder = 0;
-//        for (int i = 0; i < arrayLength; i++) {
-//
-//            for (int j = 1; j < (arrayLength - i); j++) {
-//                if (rectangleArray[j - 1] > rectangleArray[j]) {
-//                    //swapping elements
-//                    tempHolder = rectangleArray[j - 1];
-//                    rectangleArray[j - 1] = rectangleArray[j];
-//                    rectangleArray[j] = tempHolder;
-//                }
-//            }
-//        }
-//    }
-
-
 }
