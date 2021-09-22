@@ -4,6 +4,7 @@ import java.util.Date;
 
 // 'extends' used to inherit from Policy class
 // can only have ONE superclass in Java. Cannot have multiple inheritances. Only SINGLE inheritance in Java
+// a CarPolicy 'is a' Policy
 public class CarPolicy extends Policy {
 
     private Vehicle theCar;
