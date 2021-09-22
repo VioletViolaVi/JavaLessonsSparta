@@ -2,19 +2,51 @@ package com.spartaglobal.java.lessons;
 
 public class Main {
     public static void main(String[] args) {
+        // when making instances of constructors intellij, or any other editor, will identify which constructor you mean to use by matching the constructors parameters to the arguments passed in the instances of the said constructors. The constructors also have to be different regarding the number of arguments and their types.
+
         // an object is an instance of a class
         // below is creating a policy variable and initialising it with a Policy object
-        Policy policyOne = new Policy();
+        Policy policyOne = new Policy(); // new object 1
 
-        policyOne.type = "Home";
-        policyOne.maxCover = 1500.0;
-        policyOne.policyHolder = "Denies Neagu";
-
+        policyOne.setType("Home");
+        policyOne.setMaxCover(1500.0);
+        policyOne.setPolicyHolder("Denies Neagu");
         if (policyOne.processClaim(1300.0, "Set fire to sofa")) {
             System.out.println("Claim accepted");
         } else {
             System.out.println("Claim rejected");
         }
+
+        // my question response...
+        Policy policyTwo = new Policy(); // new object 2 is using the 'zero-argument' or 'default constructor' as there are no arguments passed though the constructor. You get this for free if none of your own constructers have been made
+        // null is printed as nothing has been assigned to THIS policyHolder
+        System.out.println(policyTwo.getPolicyHolder());
+        // 0.0 default as no value is in the below:
+        System.out.println(policyTwo.getPremium());
+
+        policyTwo.setPolicyHolder("Denies Neagu");
+
+        policyOne.setPremium(30.0);
+        System.out.println(policyOne);
+
+        // creating an constructor looses any free contrcutors form intlelji
+        // the order of the values for the parameters will be defined by the order the parameters are present in the contsturotr
+        Policy policyThree = new Policy(
+                "Car",
+                "Vivian Chinweze",
+                12.0,
+                1200.0,
+                null); // object 3
+        System.out.println(policyThree);
+
+        // '==' asks are they the same object
+        // .equals calls the .equals() method which returns a boolean
+        if (policyOne.equals(policyTwo)) {
+            System.out.println("The objects are the same");
+        } else {
+
+        }
+
 
 
 /*
