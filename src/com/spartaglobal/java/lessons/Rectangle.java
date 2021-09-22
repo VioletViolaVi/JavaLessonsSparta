@@ -6,7 +6,7 @@ public class Rectangle {
     private double length;
     private double width;
 
-    public Rectangle(int lengthParam, int widthParam) {
+    public Rectangle(double lengthParam, double widthParam) {
         this.length = lengthParam;
         this.width = widthParam;
     }

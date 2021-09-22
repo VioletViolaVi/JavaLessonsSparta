@@ -1,27 +1,45 @@
 package com.spartaglobal.java.lessons;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // Bubble sorting solution:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: (copy is below so....)
+        // Assignment 1 - Bubble sorting solution:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: (copy is below so....)
 
-        // array of ints for the argument value
-        int intArray[] ={89, 7, 56, 2314, 78, 0, 145824, 4};
+        // instances of bubbleSorter made
+        BubbleSort bubbleSort1 = new BubbleSort(89);
+        BubbleSort bubbleSort2 = new BubbleSort(7);
+        BubbleSort bubbleSort3 = new BubbleSort(56);
+        BubbleSort bubbleSort4 = new BubbleSort(2314);
+        BubbleSort bubbleSort5 = new BubbleSort(78);
+        BubbleSort bubbleSort6 = new BubbleSort(0);
+        BubbleSort bubbleSort7 = new BubbleSort(145824);
+        BubbleSort bubbleSort8 = new BubbleSort(4);
 
-        // calls bubbleSort method to rearrange ints
-        BubbleSort.bubbleSort(intArray);
+        // empty arraylist of INTEGERS made - these are INTEGERS!!!
+        ArrayList<Integer> allNumbers = new ArrayList<>();
 
-        // Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        // adding on instances into the arraylist
+        allNumbers.add(bubbleSort1.getAnyNum());
+        allNumbers.add(bubbleSort2.getAnyNum());
+        allNumbers.add(bubbleSort3.getAnyNum());
+        allNumbers.add(bubbleSort4.getAnyNum());
+        allNumbers.add(bubbleSort5.getAnyNum());
+        allNumbers.add(bubbleSort6.getAnyNum());
+        allNumbers.add(bubbleSort7.getAnyNum());
+        allNumbers.add(bubbleSort8.getAnyNum());
+
+        // calls the sorting method made to show the final (sorted) answer
+        BubbleSort.bubbleSorter(allNumbers);
+
+
+        // Assignment 2 - Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
         // instances of rectangles classes made*
-        Rectangle rectOne = new Rectangle(6,2);
-        Rectangle rectTwo = new Rectangle(5,2);
-        Rectangle rectThree = new Rectangle(2,2);
-        Rectangle rectFour= new Rectangle(1,2);
+        Rectangle rectOne = new Rectangle(188.7,2.9);
+        Rectangle rectTwo = new Rectangle(50.4,2.1);
+        Rectangle rectThree = new Rectangle(6.2,7.2);
+        Rectangle rectFour= new Rectangle(20.1,8.2);
 
         // empty arraylist of DOUBLES made - these are DOUBLES!!!
         ArrayList<Double> allRectangles = new ArrayList<>();
@@ -181,21 +199,42 @@ public class Main {
             System.out.println(p);
         }
 
-        // Assignment 1: Bubble sorting solution::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        // Assignment 1 - Bubble sorting solution::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-        // array of ints for the argument value
-        int intArray[] ={89, 7, 56, 2314, 78, 0, 145824, 4};
+        // instances of bubbleSorter made
+        BubbleSort bubbleSort1 = new BubbleSort(89);
+        BubbleSort bubbleSort2 = new BubbleSort(7);
+        BubbleSort bubbleSort3 = new BubbleSort(56);
+        BubbleSort bubbleSort4 = new BubbleSort(2314);
+        BubbleSort bubbleSort5 = new BubbleSort(78);
+        BubbleSort bubbleSort6 = new BubbleSort(0);
+        BubbleSort bubbleSort7 = new BubbleSort(145824);
+        BubbleSort bubbleSort8 = new BubbleSort(4);
 
-        // calls bubbleSort method to rearrange ints
-        BubbleSort.bubbleSort(intArray);
+        // empty arraylist of INTEGERS made - these are INTEGERS!!!
+        ArrayList<Integer> allNumbers = new ArrayList<>();
 
-        // Assignment 2: Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        // adding on instances into the arraylist
+        allNumbers.add(bubbleSort1.getAnyNum());
+        allNumbers.add(bubbleSort2.getAnyNum());
+        allNumbers.add(bubbleSort3.getAnyNum());
+        allNumbers.add(bubbleSort4.getAnyNum());
+        allNumbers.add(bubbleSort5.getAnyNum());
+        allNumbers.add(bubbleSort6.getAnyNum());
+        allNumbers.add(bubbleSort7.getAnyNum());
+        allNumbers.add(bubbleSort8.getAnyNum());
+
+        // calls the sorting method made to show the final (sorted) answer
+        BubbleSort.bubbleSorter(allNumbers);
+
+
+        // Assignment 2 - Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
         // instances of rectangles classes made*
-        Rectangle rectOne = new Rectangle(6,2);
-        Rectangle rectTwo = new Rectangle(5,2);
-        Rectangle rectThree = new Rectangle(2,2);
-        Rectangle rectFour= new Rectangle(1,2);
+        Rectangle rectOne = new Rectangle(188.7,2.9);
+        Rectangle rectTwo = new Rectangle(50.4,2.1);
+        Rectangle rectThree = new Rectangle(6.2,7.2);
+        Rectangle rectFour= new Rectangle(20.1,8.2);
 
         // empty arraylist of DOUBLES made - these are DOUBLES!!!
         ArrayList<Double> allRectangles = new ArrayList<>();
