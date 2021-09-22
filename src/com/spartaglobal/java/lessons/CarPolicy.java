@@ -14,6 +14,7 @@ public class CarPolicy extends Policy {
                      double maxCover,
                      Date renewalDate,
                      Vehicle theCar) {
+        // this super constructor is optional; being added that is
         super(type,
                 policyHolder,
                 premium,

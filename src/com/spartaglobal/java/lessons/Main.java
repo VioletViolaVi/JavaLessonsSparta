@@ -1,5 +1,8 @@
 package com.spartaglobal.java.lessons;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         // when making instances of constructors intellij, or any other editor, will identify which constructor you mean to use by matching the constructors parameters to the arguments passed in the instances of the said constructors. The constructors' parameters also have to be different regarding the number of arguments and their types.
@@ -77,6 +80,30 @@ public class Main {
         // staceyPolicy.setTheCar(new Vehicle()); // can't access the CarPolicy class
         // ((CarPolicy)staceyPolicy).setTheCar(new Vehicle()); // way to get around the error (this is called casting) from above HOWEVER it does come with errors/issues so... don't bother :D
 
+        // Wed Sep 22 15:05:17 BST 2021 - example output
+        Date date = new Date();
+        System.out.println(date);
+
+        // array of Policy classes (maybe instances of these)
+        ArrayList<Policy> thePolicies = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            if (Math.random() > 0.5) {
+                thePolicies.add(new LifePolicy());
+            } else {
+                thePolicies.add(new CarPolicy(
+                        "Car",
+                        "random",
+                        Math.random()*1000.0,
+                        Math.random()*10000.0,
+                        new Date(),
+                        new Vehicle()));
+            }
+        }
+        // iterates through arrayList
+        // compiler knows there will be a toString method
+        for (Policy p: thePolicies) {
+            System.out.println(p);
+        }
 
 /*
         // 21st September 2021:
