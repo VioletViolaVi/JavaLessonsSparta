@@ -13,7 +13,7 @@ public class Policy {
     // methods (functions inside a class)
     public boolean processClaim(double claimAmount, String claimReason){
         System.out.println("Processing claim for: " + claimReason);
-        // the below WILL return a boolean value:
+        // the below WILL return a boolean value: TRUE OR FALSE!!!
         return claimAmount < maxCover;
     }
 
