@@ -15,7 +15,7 @@ public class Main {
 
         // produces random num between 0 - 100 inclusively then adds it to arraylist
         for(int i = 0; i < 8; i++){
-            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101 - 0) + 0);
+            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101));
             allNumbers.add(bubbleSort.getAnyNum());
         }
 
@@ -214,12 +214,12 @@ public class Main {
         allNumbers.add(bubbleSort7.getAnyNum());
         allNumbers.add(bubbleSort8.getAnyNum());
 
-        // (to keep code DRY I used Random class and a for loop instead) produces random num between 0 - 100 inclusively then adds it to arraylist
+        // (to keep code DRY I used the Random class and a for loop instead) produces random num between 0 - 100 inclusively then adds it to arraylist
         // random numbers
         Random random = new Random();
 
         for(int i = 0; i < 8; i++){
-            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101 - 0) + 0);
+            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101));
             allNumbers.add(bubbleSort.getAnyNum());
         }
 
