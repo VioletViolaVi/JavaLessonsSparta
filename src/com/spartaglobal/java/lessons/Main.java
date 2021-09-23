@@ -1,33 +1,23 @@
 package com.spartaglobal.java.lessons;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         // Assignment 1 - Bubble sorting solution:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: (copy is below so....)
 
-        // instances of bubbleSorter made
-        BubbleSort bubbleSort1 = new BubbleSort(89);
-        BubbleSort bubbleSort2 = new BubbleSort(7);
-        BubbleSort bubbleSort3 = new BubbleSort(56);
-        BubbleSort bubbleSort4 = new BubbleSort(2314);
-        BubbleSort bubbleSort5 = new BubbleSort(78);
-        BubbleSort bubbleSort6 = new BubbleSort(0);
-        BubbleSort bubbleSort7 = new BubbleSort(145824);
-        BubbleSort bubbleSort8 = new BubbleSort(4);
-
         // empty arraylist of INTEGERS made - these are INTEGERS!!!
         ArrayList<Integer> allNumbers = new ArrayList<>();
 
-        // adding on instances into the arraylist
-        allNumbers.add(bubbleSort1.getAnyNum());
-        allNumbers.add(bubbleSort2.getAnyNum());
-        allNumbers.add(bubbleSort3.getAnyNum());
-        allNumbers.add(bubbleSort4.getAnyNum());
-        allNumbers.add(bubbleSort5.getAnyNum());
-        allNumbers.add(bubbleSort6.getAnyNum());
-        allNumbers.add(bubbleSort7.getAnyNum());
-        allNumbers.add(bubbleSort8.getAnyNum());
+        // random numbers
+        Random random = new Random();
+
+        // produces random num between 0 - 100 inclusively then adds it to arraylist
+        for(int i = 0; i < 8; i++){
+            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101 - 0) + 0);
+            allNumbers.add(bubbleSort.getAnyNum());
+        }
 
         // calls the sorting method made to show the final (sorted) answer
         BubbleSort.bubbleSorter(allNumbers);
@@ -223,6 +213,15 @@ public class Main {
         allNumbers.add(bubbleSort6.getAnyNum());
         allNumbers.add(bubbleSort7.getAnyNum());
         allNumbers.add(bubbleSort8.getAnyNum());
+
+        // (to keep code DRY I used Random class and a for loop instead) produces random num between 0 - 100 inclusively then adds it to arraylist
+        // random numbers
+        Random random = new Random();
+
+        for(int i = 0; i < 8; i++){
+            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101 - 0) + 0);
+            allNumbers.add(bubbleSort.getAnyNum());
+        }
 
         // calls the sorting method made to show the final (sorted) answer
         BubbleSort.bubbleSorter(allNumbers);
