@@ -1,9 +1,6 @@
 package com.spartaglobal.java.lessons;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -144,6 +141,36 @@ public class Main {
             m.sendMessage();
         }
         Messageable.anotherFunction();
+
+        // CollectionTester using arrayLists:
+        ArrayList<String> myList = new ArrayList<>(50);
+        for (int i = 0; i < 40; i++) {
+            myList.add(39 - i, "Hello" + i);
+        }
+        System.out.println(myList);
+        System.out.println(myList.size());
+        System.out.println(myList.get(13));
+        myList.remove(13);
+        System.out.println(myList);
+        System.out.println(myList.get(13));
+        myList.add(13, "New Value");
+        System.out.println(myList);
+
+        // Hashsets
+        HashSet<String> mySet = new HashSet<>();
+        mySet.add("Clover");
+        mySet.add("Sam");
+        mySet.add("Alex");
+        mySet.add("Arthur");
+        mySet.add("Clover");
+        System.out.println(mySet);
+
+        HashSet<Person> personSet = new HashSet<>();
+        personSet.add(new Person("Cathy", "French"));
+        personSet.add(new Person("Danny", "Jew")); // depends on hashCode & equals
+        personSet.add(new Person("Maxie", "Gunthorpe"));
+        personSet.add(new Person("Sara", "Winsville"));
+        System.out.println(personSet);
 
 /*
 
