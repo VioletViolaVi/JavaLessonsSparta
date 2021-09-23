@@ -1,48 +1,149 @@
 package com.spartaglobal.java.lessons;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        // Assignment 1 - Bubble sorting solution:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: (copy is below so....)
+        // note1: when making instances of constructors intellij, or any other editor, will identify which constructor you mean to use, by matching the constructors parameters to the arguments passed in the instances of the said constructors. The constructors' parameters also have to be different regarding the number of arguments and their types.
+        // note2: an object is an instance of a class
 
-        // empty arraylist of INTEGERS made - these are INTEGERS!!!
-        ArrayList<Integer> allNumbers = new ArrayList<>();
+        // below creates a policy variable and initialising it with a Policy object
+        Policy policyOne = new Policy() {
+            @Override
+            public boolean processClaim(double claimAmount, String claimReason) {
+                return false;
+            }
+        }; // 1st new object made
+        System.out.println(policyOne);
 
-        // random numbers
-        Random random = new Random();
+        // setting values of the instance fields using the setters of the class
+        policyOne.setType("Home");
+        policyOne.setMaxCover(1500.0);
+        policyOne.setPremium(30.0);
 
-        // produces random num between 0 - 100 inclusively then adds it to arraylist
-        for(int i = 0; i < 8; i++){
-            BubbleSort bubbleSort = new BubbleSort(random.nextInt(101));
-            allNumbers.add(bubbleSort.getAnyNum());
+        // uses boolean method in Policy class to answer this if/else condition
+        if (policyOne.processClaim(1300.0, "Set fire to sofa")) {
+            System.out.println("Claim accepted");
+        } else {
+            System.out.println("Claim rejected");
         }
 
-        // calls the sorting method made to show the final (sorted) answer
-        BubbleSort.bubbleSorter(allNumbers);
+        // (my question response...:)...)
+        // 2nd new object made
+        Policy policyTwo = new Policy() {
+            @Override
+            public boolean processClaim(double claimAmount, String claimReason) {
+                return false;
+            }
+        }; // this object is using a 'zero-argument' or 'default' constructor as there are no arguments passed though the constructor. You get this for free from Java if none of your own constructors have been made
+        System.out.println(policyTwo.getPolicyHolder());// null is printed as nothing has been assigned to THIS policyHolder called on the 2nd new object
+        System.out.println(policyTwo.getPremium()); // 0.0 is the default value as there isn't a value present
 
+        // shows example of how the strings are set the same on different 'instances of the class' i.e. policyOne & policyTwo
+        policyOne.setPolicyHolder("Denies Neagu");
+        policyTwo.setPolicyHolder("Denies Neagu");
+        // '==' asks are they the same object
+        // .equals calls the .equals() method which returns a boolean
+        if (policyOne.equals(policyTwo)) {
+            System.out.println("The objects are the same");
+        }
 
-        // Assignment 2 - Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        // creating a constructor looses any free constructors form intellij
+        // the order of the arguments written in this 'instance of the constructor' is determined by the order the parameters in the constructor within the Policy class
+        Policy policyThree = new Policy(
+                "Car",
+                "Monica Taylor",
+                12.0,
+                1200.0,
+                null) {
+            @Override
+            public boolean processClaim(double claimAmount, String claimReason) {
+                return false;
+            }
+        }; // 3rd new object made
+        System.out.println(policyThree);
 
-        // instances of rectangles classes made*
-        Rectangle rectOne = new Rectangle(188,2);
-        Rectangle rectTwo = new Rectangle(50,89);
-        Rectangle rectThree = new Rectangle(6,7);
-        Rectangle rectFour= new Rectangle(20,8);
+        // instance of the subclass CarPolicy
+        CarPolicy tanyaPolicy = new CarPolicy(
+                "Car",
+                "Tanya",
+                123.0,
+                234000.0,
+                null,
+                new Vehicle());
+        tanyaPolicy.setMaxCover(45000.0);
+        tanyaPolicy.setTheCar(new Vehicle());
+        System.out.println(tanyaPolicy);
 
-        // empty arraylist of INTEGERS made - these are INTEGERS!!!
-        ArrayList<Integer> allRectangles = new ArrayList<>();
+        // policyTwo.setTheCar(new Vehicle) // would not work on Policy objects, only on CarPolicy objects
 
-        // adding on instances made from earlier into the arraylist*
-        allRectangles.add(rectOne.areaOfRectangle());
-        allRectangles.add(rectTwo.areaOfRectangle());
-        allRectangles.add(rectThree.areaOfRectangle());
-        allRectangles.add(rectFour.areaOfRectangle());
+        // declaring Policy class type whilst making an instance using the CarPolicy class
+        // inheritance described an 'is a' relationship e.g.: a sports car 'is a' vehicle, an ArrayList 'is a' List etc.
+        // if you can read out loud the 'is a' relationship AND it makes sense, then it's correct to use it as an inheritance relationship in Java
+        // aka below: a CarPolicy 'is a' Policy, from the right-hand side to the left (read it that way :))
+        Policy staceyPolicy = new CarPolicy(
+                "Car",
+                "Stacey",
+                12.0,
+                123.0,
+                null,
+                new Vehicle());
+        System.out.println(staceyPolicy.getPolicyHolder());
 
-        // calls the sorting method made to show the final (sorted) answer
-        System.out.println("\n");
-        Rectangle.rectangleAngleSorter(allRectangles);
+        // staceyPolicy.setTheCar(new Vehicle()); // can't access the CarPolicy class
+        // ((CarPolicy)staceyPolicy).setTheCar(new Vehicle()); // way to get around the above error (this is called casting) HOWEVER it does come with errors/issues so... don't bother :P
+
+        // Wed Sep 22 15:05:17 BST 2021 - example output
+        Date date = new Date();
+        System.out.println(date);
+
+        // array of Policy classes (maybe instances of these)
+        ArrayList<Policy> thePolicies = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            if (Math.random() > 0.5) {
+                thePolicies.add(new LifePolicy(true));
+            } else {
+                thePolicies.add(new CarPolicy(
+                        "Car",
+                        "random",
+                        Math.random()*1000.0,
+                        Math.random()*10000.0,
+                        new Date(),
+                        new Vehicle()));
+            }
+        }
+
+        // Policy p = new Policy(); // cannot create an instance of an abstract class
+
+        // iterates through arrayList
+        // compiler knows there will be a toString method
+        // principle of abstract classes
+        for (Policy p: thePolicies) {
+            p.processClaim(123.0, "Some reason or other");
+            System.out.println(p);
+        }
+
+        // arrayLists of Person and Phone classes
+        ArrayList<Person> personList = new ArrayList<>();
+        personList.add(new Person("Daniel", "White"));
+        personList.add(new Person("Adam", "White"));
+        personList.add(new Person("Zebedee", "White"));
+        personList.add(new Person("Daniel", "Blue"));
+        // Collections.sort(personList);
+        System.out.println(personList);
+        ArrayList<Phone> phoneList = new ArrayList<>();
+        phoneList.add(new Phone("00000000000"));
+        phoneList.add(new Phone ("111111100000"));
+        phoneList.add(new Phone ("22222200000"));
+        phoneList.add(new Phone ("033333330000"));
+        phoneList.add(new Phone( "044444444000"));
+        for(Messageable m : phoneList) {
+            m.sendMessage();
+        }
+        Messageable.anotherFunction();
 
 /*
 

@@ -36,6 +36,13 @@ public class CarPolicy extends Policy {
 
     // generated using generate feature in intellij
     @Override
+    public boolean processClaim(double claimAmount, String claimReason) {
+        System.out.println("Processing claim for car policy: " + claimReason);
+        return claimAmount < getMaxCover();
+    }
+
+    // generated using generate feature in intellij
+    @Override
     public String toString() {
         return "CarPolicy{" +
                 "theCar=" + theCar +
