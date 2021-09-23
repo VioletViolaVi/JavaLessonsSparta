@@ -36,13 +36,13 @@ public class Main {
         // Assignment 2 - Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
         // instances of rectangles classes made*
-        Rectangle rectOne = new Rectangle(188.7,2.9);
-        Rectangle rectTwo = new Rectangle(50.4,2.1);
-        Rectangle rectThree = new Rectangle(6.2,7.2);
-        Rectangle rectFour= new Rectangle(20.1,8.2);
+        Rectangle rectOne = new Rectangle(188,2);
+        Rectangle rectTwo = new Rectangle(50,89);
+        Rectangle rectThree = new Rectangle(6,7);
+        Rectangle rectFour= new Rectangle(20,8);
 
-        // empty arraylist of DOUBLES made - these are DOUBLES!!!
-        ArrayList<Double> allRectangles = new ArrayList<>();
+        // empty arraylist of INTEGERS made - these are INTEGERS!!!
+        ArrayList<Integer> allRectangles = new ArrayList<>();
 
         // adding on instances made from earlier into the arraylist*
         allRectangles.add(rectOne.areaOfRectangle());
@@ -231,13 +231,13 @@ public class Main {
         // Assignment 2 - Rectangle question::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
         // instances of rectangles classes made*
-        Rectangle rectOne = new Rectangle(188.7,2.9);
-        Rectangle rectTwo = new Rectangle(50.4,2.1);
-        Rectangle rectThree = new Rectangle(6.2,7.2);
-        Rectangle rectFour= new Rectangle(20.1,8.2);
+        Rectangle rectOne = new Rectangle(188,2);
+        Rectangle rectTwo = new Rectangle(50,89);
+        Rectangle rectThree = new Rectangle(6,7);
+        Rectangle rectFour= new Rectangle(20,8);
 
-        // empty arraylist of DOUBLES made - these are DOUBLES!!!
-        ArrayList<Double> allRectangles = new ArrayList<>();
+        // empty arraylist of INTEGERS made - these are INTEGERS!!!
+        ArrayList<Integer> allRectangles = new ArrayList<>();
 
         // adding on instances made from earlier into the arraylist*
         allRectangles.add(rectOne.areaOfRectangle());
