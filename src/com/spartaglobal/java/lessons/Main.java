@@ -4,30 +4,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // abstraction review /////////////////////////////////////// (if not needed delete as copy is below)
-        // taking real world objects and have real world things affecting it using a java class
-        // abstraction - can't work with the class, it takes making an instance aka the object in order for you to use it
-        Person2 emp1 = new Employee();
-        // using package access (commented out below) is not recommended by Neil so...
-        // emp1.firstName = "Hello";
-        //  emp1.setDepartment("Marketing"); // can no longer use these with Person2
-        emp1.setFirstName("Ted");
-        emp1.setLastName("Person");
-        // emp1.setSalary(45000.0); // can no longer use these with Person2
-        // emp1.setSalary(50000.0); // can no longer use these with Person2
-        // emp1.print(); // can no longer use these with Person2
-        Customer cust = new Customer();
-        // cust.setFristName("Terry");
-        // cust.print(); // wont work
-        System.out.println(emp1);
-        System.out.println(cust);
-
-
-
-
-
-
-
 
 
 
@@ -449,6 +425,13 @@ public class Main {
         // cust.print(); // wont work
         System.out.println(emp1);
         System.out.println(cust);
+
+
+        // SOLID study/review
+        // Collection <String> c = new ArrayDeque<>();
+        // c.;
+        // Queue <String> c = new ArrayDeque<>();
+        // c.;
 
 
  */
