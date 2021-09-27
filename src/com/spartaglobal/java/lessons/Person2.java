@@ -4,12 +4,13 @@ public class Person2 {
     protected String firstName;
     protected String lastName;
 
-    public String getFirstName() {
-        return firstName;
+    public Person2(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
@@ -18,6 +19,10 @@ public class Person2 {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     @Override

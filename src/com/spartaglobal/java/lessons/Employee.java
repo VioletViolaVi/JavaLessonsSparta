@@ -4,15 +4,17 @@ public class Employee extends Person2{
     private String department;
     private double salary;
 
+    public Employee(String firstName, String lastName) {
+        super(firstName, lastName);
+    }
+
     public void print(){
         System.out.println(
                 firstName + " " + lastName + " "
                         + department + " (" + salary + ")");
     }
 
-
-//    // commenting out the below will make the lastName read only
-    // also not eneded anymore
+//    // commenting out the below will make the lastName read only also not ended anymore
 //    public void setLastName(String lastName) {
 //        this.lastName = lastName;
 //    }

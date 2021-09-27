@@ -3,9 +3,8 @@ package com.spartaglobal.java.lessons;
 import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) {
-
-
 
 /*
 
@@ -432,6 +431,41 @@ public class Main {
         // c.;
         // Queue <String> c = new ArrayDeque<>();
         // c.;
+
+
+        // 27th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
+
+        (1. goes in main method)
+        System.out.println("Would you prefer ArrayList, HashSet or ArrayDeque?");
+        Scanner scan = new Scanner(System.in);
+        String choice = scan.next();
+        CollectionFactory theFactory;
+
+        switch (choice) {
+            case "ArrayList":   theFactory = new ArrayListCollectionFactory(); break;
+            case "ArrayDeque":  theFactory = new ArrayDequeCollectionFactory(); break;
+            case "HashSet":     theFactory = new HashSetCollectionFactory(); break;
+            default:            theFactory = null; break;
+        }
+
+        Collection<Person2> person2Collection = theFactory.getImplementation();
+        person2Collection.add(new Person2("Jamie", "Baxter"));
+        person2Collection.add(new Person2("Shelly", "Gill"));
+        System.out.println(person2Collection);
+
+        (2. goes outside main method)
+//    // more likely solution you'll see (but not needed anymore)
+//    private static Collection<Person2> collectionFactory(String choice){
+//        if(choice.equals("ArrayList")){
+//            return new ArrayList<>();
+//        } else if(choice.equals("HashSet")) {
+//            return new HashSet<>();
+//        } else if(choice.equals("ArrayDeque")){
+//            return new ArrayDeque<>();
+//        } else {
+//            return null;
+//        }
+//    }
 
 
  */
