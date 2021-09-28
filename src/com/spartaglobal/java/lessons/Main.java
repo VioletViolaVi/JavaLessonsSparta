@@ -1,6 +1,5 @@
 package com.spartaglobal.java.lessons;
 
-import java.text.ParseException;
 import java.util.*;
 
 public class Main {
