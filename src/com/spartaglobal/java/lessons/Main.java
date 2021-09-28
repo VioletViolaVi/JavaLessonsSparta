@@ -1,10 +1,10 @@
 package com.spartaglobal.java.lessons;
 
+import java.text.ParseException;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
 
 /*
 
@@ -469,11 +469,21 @@ public class Main {
 
         // 28th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
 
+       // 1.
        MySingleton theInstance = MySingleton.getInstance();
        MySingleton anotherInstance = MySingleton.getInstance();
 
         System.out.println(theInstance);
         System.out.println(anotherInstance);
+
+
+        // 2.
+        ExceptionsWorker worker = new ExceptionsWorker();
+        try{
+            worker.myFunc();
+        } catch(ParseException | MyException e) {
+            e.printStackTrace();
+        }
 
 
         // 29th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
