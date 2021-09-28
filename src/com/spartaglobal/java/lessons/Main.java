@@ -3,8 +3,12 @@ package com.spartaglobal.java.lessons;
 import java.util.*;
 
 public class Main {
-
     public static void main(String[] args) {
+       MySingleton theInstance = MySingleton.getInstance();
+       MySingleton anotherInstance = MySingleton.getInstance();
+
+        System.out.println(theInstance);
+        System.out.println(anotherInstance);
 
 /*
 
