@@ -4,11 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-       MySingleton theInstance = MySingleton.getInstance();
-       MySingleton anotherInstance = MySingleton.getInstance();
 
-        System.out.println(theInstance);
-        System.out.println(anotherInstance);
 
 /*
 
@@ -470,6 +466,17 @@ public class Main {
 //            return null;
 //        }
 //    }
+
+        // 28th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
+
+       MySingleton theInstance = MySingleton.getInstance();
+       MySingleton anotherInstance = MySingleton.getInstance();
+
+        System.out.println(theInstance);
+        System.out.println(anotherInstance);
+
+
+        // 29th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
 
 
  */
