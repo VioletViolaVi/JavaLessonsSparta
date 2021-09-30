@@ -1,12 +1,29 @@
 package com.spartaglobal.java.lessons;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 // response to someone else's question
 public class Person implements Comparable<Person>, Serializable, Messageable { // check vid for how to write this line - i think i fixed it!!!
     private String firstName;
     private String lastName;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id=" + id +
+                '}';
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -39,15 +56,6 @@ public class Person implements Comparable<Person>, Serializable, Messageable { /
         this.lastName = lastName;
     }
 
-    // 23/09/2021 - check 2nd vid around 30mins in - i think i fixed it!!!
-    @Override
-    public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
-
     @Override
     public int compareTo(Person o) {
         if (this.getLastName().equals(o.getFirstName())) {
@@ -60,5 +68,8 @@ public class Person implements Comparable<Person>, Serializable, Messageable { /
     @Override
     public void sendMessage() {
         System.out.println("Prints a message");
+    }
+
+    public <T> void getName() {
     }
 }

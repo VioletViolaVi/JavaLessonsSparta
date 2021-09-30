@@ -1,9 +1,8 @@
 package com.spartaglobal.java.lessons;
 
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
+
 
 /*
 
@@ -485,8 +484,34 @@ public class Main {
         }
 
 
-        // 29th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
+        // 30th September 2021: ////////////////////////////////////////////////////////////////////////////////////////
+            private static class PersonSorter implements Comparator<Person>{
+                @Override
+                public int compare(Person o1, Person o2){
+                    return o1.getName().compareTo(o2.getName());
+                }
+            }
+        // 30th September
+        int[] theArray = {123, 345, 234, 567, 34, 566, 7365, 235, 555};
+        BinaryTree theTree = new BinaryTree();
+        for (int nextValue : theArray) {
+            theTree.add(nextValue);
+        }
+        System.out.println(theTree);
+//        BinaryTree.TreeNode theNode = new BinaryTree.TreeNode(123);
 
+        List<Person> personList = new ArrayList<>(List.of(
+                new Person("Bob", "1"),
+                new Person("Zed", "66"),
+                new Person("Frank", "123"),
+                new Person("Jane", "345")));
+        // using anonymous inner class
+        Collections.sort(personList, new Comparator<Person>() {
+            public int compare(Person o1, Person o2) {
+//                return o1.getName().compareTo(o2.getName()); // can change this to sort however u'd like
+            }
+        });
+        System.out.println(personList);
 
  */
     }
