@@ -4,18 +4,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        String line = null;
-        try(BufferedReader in = new BufferedReader(new FileReader("canada.csv"));
-            BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"))){
-            while((line = in.readLine()) != null) {
-                System.out.println(line);
-                out.write(line + "\n");
-            }
-        } catch (FileNotFoundException e){
-            e.printStackTrace();
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+
 /*
 
         // 21st September 2021: ////////////////////////////////////////////////////////////////////////////////////////
@@ -525,6 +514,20 @@ public class Main {
         });
         System.out.println(personList);
 
+
+        // 4th October 2021: ////////////////////////////////////////////////////////////////////////////////////////
+        String line = null;
+        try(BufferedReader in = new BufferedReader(new FileReader("canada.csv"));
+            BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"))){
+            while((line = in.readLine()) != null) {
+                System.out.println(line);
+                out.write(line + "\n");
+            }
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
  */
     }
 }
