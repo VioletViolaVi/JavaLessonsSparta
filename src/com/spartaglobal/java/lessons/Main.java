@@ -8,26 +8,6 @@ import java.sql.Date;
 
 public class Main {
     public static void main(String[] args) {
-        String line = null;
-        // try-with-resources
-        try(BufferedReader in = new BufferedReader(new FileReader("canada.csv"));
-            BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"))){
-            while((line = in.readLine()) != null) {
-                System.out.println(line);
-                out.write(line + "\n");
-            }
-        } catch (FileNotFoundException e){
-            e.printStackTrace();
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
-        Date date = Date.valueOf("2021-10-05");
-        System.out.println(date);
-//        Path myPath = Paths.get("..\\IOExample\\canada.csv");
-//        Path myPath = Paths.get("canada.csv");
-        Path myPath = Paths.get("C://");
-        System.out.println(myPath);
-        System.out.println(Files.isRegularFile(myPath));
 
 /*
 
@@ -575,6 +555,10 @@ public class Main {
         Path myPath = Paths.get("C://");
         System.out.println(myPath);
         System.out.println(Files.isRegularFile(myPath));
+
+
+        // 6th October 2021: ////////////////////////////////////////////////////////////////////////////////////////
+
 
  */
     }
